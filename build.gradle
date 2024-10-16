@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven { url  "https://artifactory.apps.bancolombia.com/maven-bancolombia/"}
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'com.intuit.karate:karate-junit5:1.4.1'
+    testImplementation 'net.masterthought:cucumber-reporting:5.7.8'
+
+    implementation group: 'org.springframework', name: 'spring-jdbc', version: '5.3.18'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.1'
+
+}
+
+sourceSets {
+    test {
+        resources {
+            srcDir file('src/test/java')
+            exclude '**/*.java'
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+    //Ingresar las variables que vea conveniente:
+    systemProperty "karate.options", System.properties.getProperty("karate.options")
+    systemProperty "environment", System.properties.getProperty("environment")
+    systemProperty 'userDB', System.properties.getProperty('userDB')
+    systemProperty 'urlEndPointDB', System.properties.getProperty('urlEndPointDB')
+    systemProperty 'passwordDB', System.properties.getProperty('passwordDB')
+    systemProperty 'portBD', System.properties.getProperty('portBD')
+    systemProperty 'dbName', System.properties.getProperty('dbName')
+    systemProperty 'urlBase', System.properties.getProperty('urlBase')
+    systemProperty 'apiKey', System.properties.getProperty('apiKey')
+    outputs.upToDateWhen { false }
+}

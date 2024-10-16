@@ -1,0 +1,5 @@
+[
+  "INSERT INTO schadigi.tbl_get_card_info(date_insert,x_correlation_id,issuer_card_ref_id, virtual_card_id,wallet_provider_id, state_token, is_processing) VALUES ('2024-02-22 15:38:12.971218', 'GCI-07b4e012-e8c3-4369-bd35-8167b8e635f2', '47a9a45c-686a-4312-a1ea-12051be37e17', 'DBCOMC00001120311daf17ea36234c5d8dd2a895f363f16e', 'ECOM', 'RESUMED', false)",
+  "INSERT INTO schadigi.tbl_get_card_info(date_insert,x_correlation_id,issuer_card_ref_id, virtual_card_id,wallet_provider_id, state_token, is_processing) VALUES ('2024-02-23 15:38:12.971218', 'GCI-07b4e012-e8c3-4369-bd35-8167b8e635f2', '47a9a45c-686a-4312-a1ea-12051be37e17', 'DBCOMC00001120311daf17ea36234c5d8dd2a895f363f16e', 'ECOM', 'RESUMED', false)",
+  "INSERT INTO schadigi.tbl_get_card_info(date_insert,x_correlation_id,issuer_card_ref_id, virtual_card_id,wallet_provider_id, state_token, is_processing) VALUES ('2024-02-24 15:38:12.971218', 'GCI-07b4e012-e8c3-4369-bd35-8167b8e635f2', '47a9a45c-686a-4312-a1ea-12051be37e17', 'DBCOMC00001120311daf17ea36234c5d8dd2a895f363f16e', 'ECOM', 'RESUMED', false)"
+]
