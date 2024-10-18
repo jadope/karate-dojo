@@ -35,6 +35,8 @@ test {
     systemProperty "environment", System.properties.getProperty("environment")
     systemProperty 'userDB', System.properties.getProperty('userDB')
     systemProperty 'urlEndPointDB', System.properties.getProperty('urlEndPointDB')
+    systemProperty 'urlCluster', System.properties.getProperty('urlCluster')
+    systemProperty 'urlRegion', System.properties.getProperty('urlRegion')
     systemProperty 'passwordDB', System.properties.getProperty('passwordDB')
     systemProperty 'portBD', System.properties.getProperty('portBD')
     systemProperty 'dbName', System.properties.getProperty('dbName')

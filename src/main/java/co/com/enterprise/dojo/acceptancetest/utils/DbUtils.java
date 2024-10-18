@@ -14,14 +14,16 @@ public class DbUtils {
 
     private DbUtils() {
         String urlEndPointDB = System.getProperty("urlEndPointDB");
+        String urlCluster = System.getProperty("urlCluster");
+        String urlRegion = System.getProperty("urlRegion");
         String userDB = System.getProperty("userDB");
         String passwordDB = System.getProperty("passwordDB");
         String portBD = System.getProperty("portBD");
         String dbName = System.getProperty("dbName");
         String driverClassName = "org.postgresql.Driver";
-        String url = "jdbc:postgresql://" + urlEndPointDB + ":" + portBD + "/" + dbName
+        String url = "jdbc:postgresql://" + urlEndPointDB +"." + urlCluster +"."+urlRegion+ ".rds.amazonaws.com:" + portBD + "/" + dbName
                 + "?useSSL=false&allowPublicKeyRetrieval=true";
-        System.out.println("urldb "+url);
+        System.out.println("urldb funca?"+url);
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(driverClassName);
         dataSource.setUrl(url);
@@ -60,8 +62,5 @@ public class DbUtils {
     public int update(String query) {
         return jdbc.update(query);
     }
-
-
-
 
 }

@@ -12,13 +12,13 @@ function fn() {
   };
   if (env == 'dev') {
     config.authkey
-    config.urlBase = 'https://rickandmortyapi.com';
+    config.urlBase = 'https://rickandmortyapi.dev.com';
   } else if (env == 'cer') {
    config.authkey
-   config.urlBase = 'https://rickandmortyapi.com';
+   config.urlBase = 'https://rickandmortyapi.qa.com';
   }else if (env == 'local') {
     config.authkey
-     config.urlBase = 'https://rickandmortyapi.com';
+     config.urlBase = 'https://rickandmortyapi.qa.com';
 
   }
 

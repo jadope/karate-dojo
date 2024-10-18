@@ -5,12 +5,10 @@ Feature: Acceptance tests to delete, insert data into the DB
     * def db = DbUtils.getInstance()
 
   # Escenario permite eliminar y registar data en tabla de la DB GetCardInfo
+
   Scenario: Insert and delete data into DB
-    * def queriesInsertGetCardInfo = read('../queriesSql/insertGetCardInfo.json')
-    * def queriesDelete = read('../queriesSql/queriesDelete.json')
+    * def queriesSelect = read('queriesSql/selectTopes.json')
 
-    * def concatenateQueriesInsert = queriesInsertGetCardInfo.join(";")
-    * def concatenateQueriesDelete = queriesDelete.join(";")
+    * def QuerySelect = queriesSelect.join(";")
 
-    * db.executeQuery(concatenateQueriesInsert)
-    * db.executeQuery(concatenateQueriesDelete)
+    * db.readRow(QuerySelect)
