@@ -26,6 +26,7 @@ Feature: Rick and Morty Api Rest
 
 
   Scenario: POST Morpheus v2
+    * configure headers = { 'Accept-Encoding': 'gzip, deflate, br', 'Connection':'keep-alive', 'content-Type': 'application/json'}
     Given path '/api/users'
     And request postRequest
     When method POST
