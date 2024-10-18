@@ -24,6 +24,7 @@ function fn() {
 
   config = {
     urlBase: 'https://rickandmortyapi.com',
+    urlReqres: 'https://reqres.in'
   };
 
   karate.configure('ssl', true);
