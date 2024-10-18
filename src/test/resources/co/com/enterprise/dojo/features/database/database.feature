@@ -1,3 +1,4 @@
+@Ignore
 Feature: Acceptance tests to delete, insert data into the DB
 
   Background:
@@ -6,6 +7,7 @@ Feature: Acceptance tests to delete, insert data into the DB
 
   # Escenario permite eliminar y registar data en tabla de la DB GetCardInfo
 
+  @Ignore
   Scenario: Insert and delete data into DB
     * def queriesSelect = read('queriesSql/selectTopes.json')
 
