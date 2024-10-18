@@ -1,0 +1,3 @@
+[
+  "select * from  schmolim.custom_limits where custom_limits_document_number ='1999125776' and custom_limits_document_type ='TIPDOC_FS001' and custom_limits_id = '31250'"
+]
