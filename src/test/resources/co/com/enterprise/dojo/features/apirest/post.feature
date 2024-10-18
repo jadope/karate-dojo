@@ -31,3 +31,18 @@ Feature: Rick and Morty Api Rest
     When method POST
     Then status 201
     And match response == postResponse
+
+  Scenario: Parsing a date
+    * def toTime =
+      """
+      function(s) {
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+    var sdf = new SimpleDateFormat("dd-MM-yyyy");
+    return sdf.parse(s).time
+
+    }
+    """
+
+    * def myDate = '2023-11-22'
+    * def parsedTime = toTime(myDate)
+    * print 'Parsed time:', parsedTime
